@@ -28,6 +28,7 @@ define p = Character('Priest')
 
 # The game starts here.
 
+################################ Present Day ##########################################
 label start:
 
     # Show a background. This uses a placeholder by default, but you can
@@ -82,6 +83,7 @@ label start:
 
             jump bad_end_1
 
+################################ Past 1 ##########################################
     label past_route:
 
     scene black
@@ -140,6 +142,7 @@ label start:
             
             jump lunch_alone
 
+################################ Past 1-1 ##########################################
     label lunch_together:
 
     m "Oh sure."
@@ -187,6 +190,7 @@ label start:
 
     jump past2
 
+################################ Past 1-2 ##########################################
     label lunch_alone:
 
     m "Sorry, but I already made plans."
@@ -220,6 +224,7 @@ label start:
 
     jump past2
 
+################################ Past 2 ##########################################
     label past2:
 
     scene bg class2
@@ -228,9 +233,10 @@ label start:
     # continue with a new event
     return
 
+################################ Bad Ending 1 ##########################################
     label bad_end_1:
 
-    scene black
+    scene bg sakura
     with fade
     
     stop music fadeout 1.0
