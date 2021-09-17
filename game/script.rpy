@@ -22,7 +22,7 @@
 # name of the character.
 
 define c = Character("Chiho")
-define m = Character('Me')
+define m = Character('Yuu')
 define p = Character('Priest')
 
 
@@ -47,6 +47,8 @@ label start:
     with dissolve
 
     # These display lines of dialogue.
+
+    # "Dedicated to Emily"
 
     "The day finally came. As I stood here by the side watching you walk down the aisle..."
 
@@ -184,7 +186,7 @@ label start:
     hide chiho_shock
     show chiho_annoy
 
-    c "Mou!"
+    c "もう！!*pouts*"
 
     "Thus ends another unevent day..."
 
@@ -227,10 +229,74 @@ label start:
 ################################ Past 2 ##########################################
     label past2:
 
-    scene bg class2
+    stop music fadeout 1.0
+    play music "Cheerful Days.mp3"
+
+    scene bg meadow
     with fade
 
-    # continue with a new event
+    "I was on my way to school one morning when I heard someone calling out to me."
+
+    c "Wait up!"
+
+    "I turned around and saw Chiho running up to me."
+
+    show chiho_smile2
+    with dissolve
+
+    c "Good morning Yuu-kun!"
+
+    m "Ah, morning Nakano-san."
+
+    hide chiho_smile2
+    show chiho_annoy
+
+    c "You could of waited for me before you left this morning!"
+
+    m "Sorry, sorry, but it isn't often that I get to be the one to leave on time."
+
+    hide chiho_annoy
+    show chiho_smile
+
+    c "Come to think of it. This is the first time since we were kids, that you left for school before me."
+
+    m "It isn't like you to oversleep neither. Were you up all night studying?"
+
+    stop music fadeout 1.0
+    play music "Cherry Blossoms.mp3"
+
+    hide chiho_smile
+    show chiho_sleepy
+
+    c "..."
+
+    m "Something wrong?"
+
+    c "Actually Yoshioka-senpai and I were talking last night."
+
+    m "Is that the senpai from your club?"
+
+    "Why is she so quiet all of a sudden?"
+
+    hide chiho_sleepy
+
+    stop music fadeout 1.0
+    play music "After School.mp3"
+
+    scene bg room
+    with fade
+
+    "I never had a chance to speak with Chiho since this morning. During break and lunch time, she was surrounded by the other girls in class. They looked like they were having fun gossiping about something."
+
+    "To be continued"
+
+    jump past3
+
+################################ Past 3 ##########################################
+    label past3:
+
+    "To be continue?"
+    
     return
 
 ################################ Bad Ending 1 ##########################################
