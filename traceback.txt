@@ -1,22 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 293, in script
-    jump past3
-ScriptError: could not find label 'past3'.
+  File "game/script.rpy", line 444, in script
+    jump date1
+ScriptError: could not find label 'date1'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 293, in script
-    jump past3
+  File "game/script.rpy", line 444, in script
+    jump date1
   File "renpy/ast.py", line 1752, in execute
     rv = renpy.game.script.lookup(target)
   File "renpy/script.py", line 918, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'past3'.
+ScriptError: could not find label 'date1'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.8.1895
 From Ends of the World 1.0
-Thu Sep 16 21:08:22 2021
+Sun Sep 26 20:38:10 2021

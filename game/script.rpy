@@ -25,8 +25,12 @@ define c = Character("Chiho")
 define m = Character('Yuu')
 define p = Character('Priest')
 
-
 # The game starts here.
+
+###NOTES###
+# 1. Think of the ring from KanoKari as gift from family
+# 2. Think of resturant from KimiMachi where Yuzuki gets jealous of Haruto getting hit on
+
 
 ################################ Present Day ##########################################
 label start:
@@ -232,7 +236,7 @@ label start:
     stop music fadeout 1.0
     play music "Cheerful Days.mp3"
 
-    scene bg meadow
+    scene bg spring day
     with fade
 
     "I was on my way to school one morning when I heard someone calling out to me."
@@ -279,25 +283,256 @@ label start:
     "Why is she so quiet all of a sudden?"
 
     hide chiho_sleepy
+    with dissolve
 
     stop music fadeout 1.0
     play music "After School.mp3"
 
-    scene bg room
+    scene bg class2
     with fade
 
     "I never had a chance to speak with Chiho since this morning. During break and lunch time, she was surrounded by the other girls in class. They looked like they were having fun gossiping about something."
 
-    "To be continued"
+    "After class she also immediately went to the Art Club. Perhaps I should stop by to check up on things."
 
-    jump past3
+    ".. Then again everyone is already asking me if there is anything going on between Chiho and I and if I were to show up at her club after school then it would only raise more suspicions..."
+
+    menu:
+        "Go check on Chiho at her club.":
+
+            jump confrontation
+
+        "Go home.":
+
+            jump encounter
+    
+################################ Past 2-1 ##########################################
+    
+    label confrontation:
+
+    scene bg school hallway
+    with fade
+    
+    stop music fadeout 1.0
+    play music "glitter.mp3"
+
+    "As I left the class and started making my way back towards the art club, I ran into Chiho."
+
+    show chiho_shock
+    with dissolve
+
+    m "Hey Nakano-san."
+
+    c "Yuu-kun..."
+
+    "Why was she so shock from just running into me in the hallway?"
+
+    m "I just thought that I would check and see how you are doing. You were a bit distant this morning."
+
+    "From inside the art club room, I could hear someone calling out to Chiho. A moment later, Yoshioka-senpai stepped out calling out for Chiho again."
+
+    hide chiho_shock
+    show chiho_sleepy
+
+    c "Sorry Yuu-kun, but Yoshioka-senpai and I are about to head out and pick up some art supplies."
+
+    m "I thought the school normally provides the supplies?"
+
+    c "Yoshioka-senpai and I were working on a report requesting for more club funds. We received the approval this morning."
+    c "There were a lot of students ended up joining the club this year."
+
+    "Chiho and Yoshioka-senpai then left to buy some more art supplies together."
+
+    hide chiho_sleepy
+    with dissolve
+
+    jump past3_nakano
+
+################################ Past 2-2 ##########################################
+
+    label encounter:
+
+    stop music fadeout 1.0
+    play music "Around Session.mp3"
+
+    scene bg city night
+    with dissolve
+
+    "I decided go head out to the game center and spent the evening there. By the time I left the game center, it was already dark outside."
+    "It was getting late anyways, so I guess I better head home."
+
+    scene bg train night
+    with dissolve
+
+    "As I took the train home, I thought to myself. What was Chiho up to right now? There is no way she isn't home right?"
+    "I get off the train at my stop and started making my way home."
+
+    scene bg spring night
+    with dissolve
+
+    "I notice someone in front of me walking alone. It can't be..."
+
+    m "Hey Nakano-san, what are you still doing out this late?"
+
+    show chiho_smile
+    with fade
+
+    stop music fadeout 1.0
+    play music "glitter.mp3"
+
+    c "Yuu-kun...? What are you doing here?"
+
+    m "I should be asking you the same thing. Are you just getting home now? At this hour?"
+
+    c "Sorry, we had a lot things to do for the club today."
+
+    m "Ehh, sounds like things are tough in your club."
+
+    hide chiho_smile
+    show chiho_smug
+
+    c "Things are really busy! We had to ask the staff for a bigger budget and we even had to buy our own supplies!"
+
+    "She sounds like she is having a lot of fun with the Art Club."
+
+    m "But it sounds like you are really enjoying yourself."
+
+    c "It is not too late to join, you know?"
+
+    m "Hmmm... I think I will pass still. Joining a club at this time is just weird. Plus everyone already knows one another and it will be difficult to get along with everyone now."
+
+    hide chiho_smug
+    show chiho_sad
+
+    c "..."
+
+    m "How is club activities coming along? Are you getting along with everyone?"
+
+    c "..."
+
+    m "What about Yoshioka-senpai? You said you were up all night talking to him right? What were you two talking about?"
+
+    c "..."
+
+    "I looked over to Chiho and noticed a sad expression on her face. Does she want me to join that badly?"
+
+    m "Remember when we use to walk home together all the time?"
+
+    hide chiho_sad
+    show chiho_delight
+
+    c "We would always walk to school together and back in middle school."
+
+    m "Don't forget elementary as well. We were always in the same class back then as well."
+
+    c "うん！ Un! Everyday was so much fun back then! We would often stop by the candy shop and buy a lot of candy!"
+
+    m "Then our parents would yell at us for eating so much candy."
+
+    c "That's right! You were such a bad influence on me back then!"
+
+    m "Me?! It was your idea to get candy all the time. You said it helped you study!"
+
+    hide chiho_delight
+    show chiho_angry
+
+    c "Don't you try to blame that on me!"
+
+    hide chiho_angry
+    show chiho_laugh
+
+    "It has been a while since the two of us were able to talk like this. I somehow do miss this..."
+
+    menu:
+        "Hold her hand.":
+
+            jump date1
+
+        "Don't hold her hand.":
+
+            jump go_home
+
+################################ Past 2-3 ##########################################
+    label date1:
+
+    stop music fadeout 1.0
+    play music "futari no kimochi.mp3"
+
+    "Taking the opportunity, I decided to grab and held her hand."
+
+    hide chiho_laugh
+    show chiho_shock
+
+    c "..."
+
+    hide chiho_shock
+    show chiho_smile
+
+    m "..."
+
+    c "..."
+
+    m "It... has been a while since the two of us were able to go home and talk like this, isn't it?"
+
+    c "Yeah..."
+
+    m "Hey Chi- Nakano-san?"
+
+    hide chiho_smile
+    show chiho_annoy
+
+    c "Chiho!"
+
+    hide chiho_annoy
+    show chiho_sad
+
+    c "I prefer Chiho... Nakano feels so distant..."
+
+    m "Sorry... I just thought since we are in high school now, you pre-"
+
+    c "Don't go deciding that on your own!"
+
+    m "You are right... sorry about that Chiho..."
+
+    hide chiho_sad
+    show chiho_shock
+
+    c "..."
+
+    hide chiho_shock
+    show chiho_smile2
+
+    "Without saying another word, the two of us the rest of the way home hand in hand."
+
+    jump past3_chiho
+
+################################ Past 2-4 ##########################################
+    label go_home:
+
+    "I decided not to do anything. We continued walking home while talking about nothing in particular."
+
+    jump past3_nakano
 
 ################################ Past 3 ##########################################
-    label past3:
+    label past3_nakano:
 
-    "To be continue?"
+    scene black
+    # Have an event where Yuu starts calling her Chiho again.
+
+    "To be continued in v1.02"
     
     return
+
+################################ Past 3-1 ##########################################
+    label past3_chiho:
+
+    scene black
+
+    # Write a scene similar to calling Rina by her first name after forgetting to do homework.
+
+    return
+
+    "To be continued in v1.02"
 
 ################################ Bad Ending 1 ##########################################
     label bad_end_1:
