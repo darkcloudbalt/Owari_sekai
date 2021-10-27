@@ -24,6 +24,7 @@
 define c = Character("Chiho")
 define m = Character('Yuu')
 define p = Character('Priest')
+define z = Character('Crowd')
 
 # The game starts here.
 
@@ -516,23 +517,272 @@ label start:
 ################################ Past 3 ##########################################
     label past3_nakano:
 
+    stop music fadeout 1.0
+    play music "Around Session.mp3"
+
     scene black
-    # Have an event where Yuu starts calling her Chiho again.
+
+    "One week later"
+
+    scene bg class2
+    with dissolve
+
+    "It has been a week since that day and things pretty much returned to normal."
+
+    "As always, during breaks from class, Chiho is surrounded by her friends."
+
+    show chiho_smile
+    with fade
+
+    c "Yuu-kun...?"
+
+    "Suddenly hearing someone call out to me, snapped me back to reality."
+
+    m "Huh? Oh what's up Nakano-san?"
+
+    c "Daydreaming again?"
+
+    m "Shut up!"
+
+    hide chiho_smile
+    show chiho_smile2
+
+    c "Like I was saying, after club activities today, could you help me with something?"
+
+    m "Hmm? What is it?"
+
+    hide chiho_smile2
+    show chiho_sleepy
+
+    c "I was wondering if you could help me hang some of the art pieces today?"
+
+    m "Shouldn't you ask your club members to help you with something like that?"
+
+    c "I normally would but Yoshioka-senpai is taking everyone else to the art exhibit downtown today."
+
+    m "Why aren't you going? Did he leave you out?"
+
+    c "No, I volunteered to stay behind so that the art pieces could be hung up in preparation for the upcoming festival."
+
+    m "Oh... yeah, I can help out."
+
+    hide chiho_sleepy
+    show chiho_laugh
+
+    c "Okay! Meet me in the Art Room around 3:30pm!"
+
+    c "And don't be late!"
+
+    hide chiho_laugh
+
+    stop music fadeout 1.0
+    play music "After School.mp3"
+    
+    scene black
+
+    "That evening at 3:30pm I made my way to the Art Room."
+
+    "The more I think about it, the more things did not make sense. Yoshioka-senpai and Chiho were always together working on the budget."
+
+    "Why would he not invite her out to the exhibit as well?"
+
+    scene bg school hallway
+    with dissolve
+
+    "In the hallway, I saw Chiho standing outside the Art Room."
+
+    show chiho_sad
+    with fade
+
+    m "Hey Nakano-san, something the matter?"
+
+    hide chiho_sad
+    show chiho_shock
+
+    c "Yuu-kun?"
+
+    m "Something the matter?"
+
+    hide chiho_shock
+    show chiho_sad
+
+    c "I am very sorry! Before everyone left for the exhibit they helped me hang up the pieces!"
+
+    m "Is that all? Don't scare me like that. I thought something happened for a moment there."
+
+    m "Are you done for the day? Let's head home together then."
+
+    hide chiho_sad
+    show chiho_smile
+
+    c "Okay!"
+
+    hide chiho_smile
+
+    scene bg spring evening
+    with dissolve
+
+    show chiho_normal
+    with fade
+
+    "We started heading home together for the first time in a while."
+
+    m "When was the last time that we went home together like this?"
+
+    c "Hmmm, I want to say since middle school?"
+
+    m "Oh right, since we entered high school, you ended up joining the Art Club and I went home alone."
+
+    hide chiho_normal
+    show chiho_smug
+    
+    c "Are you saying that you miss me?"
+
+    m "Don't be so full of yourself now."
+
+    hide chiho_smug
+    show chiho_sad
+
+    "Chiho went quiet so I turned over to take a look at her."
+
+    "She had this sad expression on her face."
+
+    m "Hey now, I was only joking there."
+
+    m "Of course, I miss going home together with you Nakano-san."
+
+    c "Yuu-kun? Why have you been calling me that lately? It feels so distant."
+
+    m "Oh... well since we were in high school, I figured tha-"
+
+    hide chiho_sad
+    show chiho_annoy
+
+    c "Don't to deciding things like that!"
+
+    c "You have been so distant since we entered high school."
+
+    m "Well you have been spending all your spare time in the Art Club and Yoshioka-senpai as well!"
+
+    hide chiho_annoy
+    show chiho_sad
+
+    "In the end... she was right. I was the one who started calling her Nakano."
+
+    "I was also the one that did not join the Art Club."
+
+    m "Sorry. I was out of line there, Chiho."
+
+    hide chiho_sad
+    show chiho_shock
+
+    m "That is alright with you right?"
+
+    hide chiho_shock
+    show chiho_laugh
+
+    c "うん！"
+
+    jump year2
+
+################################ Past 3-1 ##########################################
+    label past3_chiho:
+
+    stop music fadeout 1.0
+    play music "Cheerful Days.mp3"
+
+    scene bg class2
+    with dissolve
+
+    "As I entered class the next morning, I saw everyone busy writing in their notebooks."
+
+    m "What is everyone busy writing in their notebooks for?"
+
+    "Nobody answered me and just continue writing in their notebooks."
+
+    m "Is there something that I am missing...?"
+
+    "As I looked around, I saw Chiho and her friends chatting away."
+
+    show chiho_smile
+
+    c "Did you forget that today is the day that our homework is due?"
+
+    m "Crap! I completely forgotten about it!"
+
+    "After what happened last night, I completely forgotten about homework! Then again... I also spent the day at the game center..."
+
+    "So that was why everyone was so focused on!"
+
+    "There is only one thing left for me to do..."
+
+    m "umm... Excuse me, but dear benevolent Nakano-sama, but may I please see your notebook?"
+
+    "At this moment, I have no shame in asking my one and only hope."
+
+    hide chiho_smile
+    show chiho_smile2
+
+    c "I thought something like this might happen. Here give me a moment."
+
+    "Chiho went into her bag and grabbed her notebook from her bag. As she started handing me the notebook, I expressed my true feelings."
+
+    m "Thanks Nakano-san, you really helping me out here."
+
+    hide chiho_smile2
+    show chiho_annoy
+
+    c "On second thought, I changed my mind!"
+
+    "Chiho immediately withdrew her hand."
+
+    m "Wait, why?!"
+
+    c "I don't lend my notebooks to promise breakers!"
+
+    m "What promise did I break?"
+
+    "Chiho just continue staring at my annoyed."
+
+    "What promise is she talking about?"
+
+    "..."
+
+    "Oh right..."
+
+    m "Thanks...Chiho..."
+
+    hide chiho_annoy
+    show chiho_laugh
+
+    c "Here you go!"
+
+    "She immediately handed me her notebook."
+
+    "I could hear the class already whispering among themselves."
+
+    z "Hey did you hear that? Did he just call her Chiho?"
+
+    "The girls immediately swarmed Chiho."
+
+    "No doubt they want to know why I am suddenly calling her Chiho all of a sudden."
+
+    "Oh well, I have more important matters to attend to at the moment."
+
+    jump year2
+################################ Year 2-1 ##########################################
+label year2:
+
+    stop music fadeout 1.0
+
+    scene black
+
+    "Before I knew it, the remainder of the year passed and my second year as a high school student started..."
 
     "To be continued in v1.02"
     
     return
 
-################################ Past 3-1 ##########################################
-    label past3_chiho:
-
-    scene black
-
-    # Write a scene similar to calling Rina by her first name after forgetting to do homework.
-
-    return
-
-    "To be continued in v1.02"
 
 ################################ Bad Ending 1 ##########################################
     label bad_end_1:
