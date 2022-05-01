@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 516: expected ':' not found.
-    label past3_chiho
-                     ^
+File "game/custom_screens.rpy", line 8: u'height' is not a keyword argument or valid child for the imagebutton statement.
+    height 10
+          ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sun Sep 26 20:34:54 2021
+Sun May  1 15:43:44 2022

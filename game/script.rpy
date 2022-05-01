@@ -14,9 +14,17 @@
     image chiho_smile2 = im.Scale("chiho_smile2.png", 850, 750)
     image chiho_smug = im.Scale("chiho_smug.png", 850, 750)
     image chiho_sad = im.Scale("chiho_sad.png", 850, 750)
+    image summer_chiho_angry = im.Scale("summer_chiho_angry.png", 850, 750)
     image chiho_wedding = im.Scale("Chiho_wedding.png", 800, 800)
     image chiho_wedding_kiss = im.Scale("Chiho_wedding_kiss.png", 800, 800)
+    image opening = Movie(size=(1280, 720), channel="movie", play="Opening.webm", loop=False)
+    image ending = Movie(size=(1280,720), channel="movie", play="Ending.webm", loop=False)
 # The script of the game goes in this file.
+
+# 1280 x 720 BG
+
+# 1000 x 1200 char
+
 
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
@@ -25,6 +33,12 @@ define c = Character("Chiho")
 define m = Character('Yuu')
 define p = Character('Priest')
 define z = Character('Crowd')
+
+default love = 0
+define intellect = 0
+define charm = 0
+define courage = 0
+define kindness = 0
 
 # The game starts here.
 
@@ -39,6 +53,11 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
+
+    $ renpy.movie_cutscene("Opening.webm")
+    # This shoes the Stats button
+    show screen gameUI
+
     play music "wedding_dress.mp3"
 
     scene bg church2
@@ -83,6 +102,8 @@ label start:
 
     menu:
         "Think about the past.":
+
+            $ love += 1
 
             jump past_route
 
@@ -142,6 +163,8 @@ label start:
 
     menu:
         "Oh, sure.":
+
+            $ love += 1
             
             jump lunch_together
 
@@ -447,6 +470,8 @@ label start:
     menu:
         "Hold her hand.":
 
+            $ love += 2
+
             jump date1
 
         "Don't hold her hand.":
@@ -683,7 +708,7 @@ label start:
 
     c "うん！"
 
-    jump year2
+    jump summer
 
 ################################ Past 3-1 ##########################################
     label past3_chiho:
@@ -769,15 +794,20 @@ label start:
 
     "Oh well, I have more important matters to attend to at the moment."
 
-    jump year2
-################################ Year 2-1 ##########################################
-label year2:
+    jump summer
+    
+################################ Summer-1 ##########################################
+    label summer:
 
     stop music fadeout 1.0
+    play music "Whisper Bless.mp3"
 
-    scene black
+    scene bg room day
+    with fade
 
-    "Before I knew it, the remainder of the year passed and my second year as a high school student started..."
+    show summer_chiho_angry
+
+    "Before I knew it, summer vacation came. As I spent the days hiding in my air conditioned room, I wonder what Chiho has been up to."
 
     "To be continued in v1.02"
     
@@ -801,6 +831,8 @@ label year2:
     "I am such a coward..."
 
     "{b}Bad ending{/b}"
+
+    $ renpy.movie_cutscene("Ending.webm")
 
     # c "笑い会えるってすごく幸せなこと"
 
