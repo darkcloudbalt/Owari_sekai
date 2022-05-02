@@ -35,10 +35,10 @@ define p = Character('Priest')
 define z = Character('Crowd')
 
 default love = 0
-define intellect = 0
-define charm = 0
-define courage = 0
-define kindness = 0
+# define intellect = 2
+# define charm = 4
+# define courage = 1
+# define kindness = 5
 
 # The game starts here.
 
@@ -324,6 +324,8 @@ label start:
     menu:
         "Go check on Chiho at her club.":
 
+            $ love += 1
+
             jump confrontation
 
         "Go home.":
@@ -467,16 +469,24 @@ label start:
 
     "It has been a while since the two of us were able to talk like this. I somehow do miss this..."
 
-    menu:
-        "Hold her hand.":
+    label choice1:
 
-            $ love += 2
+        menu:
+            "Hold her hand.":
+                if love <= 1:
 
-            jump date1
+                    "You lack the courage to take her hand."
 
-        "Don't hold her hand.":
+                    jump choice1
+                elif love <= 2:
 
-            jump go_home
+                    $ love += 2
+
+                    jump date1
+
+            "Don't hold her hand.":
+
+                jump go_home
 
 ################################ Past 2-3 ##########################################
     label date1:

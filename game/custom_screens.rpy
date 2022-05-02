@@ -23,19 +23,19 @@ screen StatsUI:
             vbox:
                 spacing 10
                 text "Love" size 40
-                text "Intellect" size 40
-                text "Charm" size 40
-                text "Courage" size 40
-                text "Kindness" size 40
+                # text "Intellect" size 40
+                # text "Charm" size 40
+                # text "Courage" size 40
+                # text "Kindness" size 40
 
             # Values Column     
             vbox:    
                 spacing 10
                 text "[love]" size 40
-                text "[intellect]" size 40
-                text "[charm]" size 40
-                text "[courage]" size 40
-                text "[kindness]" size 40
+                # text "[intellect]" size 40
+                # text "[charm]" size 40
+                # text "[courage]" size 40
+                # text "[kindness]" size 40
      
     ## Show a Return button
     imagebutton:

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/custom_screens.rpy", line 8: u'height' is not a keyword argument or valid child for the imagebutton statement.
-    height 10
-          ^
+File "game/script.rpy", line 481: expected ':' not found.
+    else if love <= 1:
+         ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sun May  1 15:43:44 2022
+Sun May  1 18:33:15 2022
